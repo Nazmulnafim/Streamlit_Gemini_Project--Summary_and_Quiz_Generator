@@ -18,7 +18,8 @@ def note_generator(photos):
     to differentiate different sections """
 
     response = client.models.generate_content(
-        model="gemini-3-flash-preview",
+        # model="gemini-3-flash-preview", 
+        model = "gemini-3.1-pro-preview",
         contents=[photos, prompt],
     )
 
@@ -39,7 +40,8 @@ def quiz_generator(photos, difficulty):
     prompt = f"Generate 3 quizes based on {difficulty}. Make sure to add markdown to differentiate the options.Show the answers in below section, not with the question."
 
     response = client.models.generate_content(
-        model="gemini-3-flash-preview",
+        # model="gemini-3-flash-preview",
+        model = "gemini-3.1-pro-preview",
         contents=[photos, prompt],
     )
 
